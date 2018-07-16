@@ -30,12 +30,6 @@ class PartiesController extends Controller
         return view('parties.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -49,20 +43,22 @@ class PartiesController extends Controller
 
 
         $input['title'] = $request->title;
-        Party::create($input);
-        return back()
-            ->with('success','Image Uploaded successfully.');
+        $input['short'] = $request->short;
+        $input['description'] = $request->description;
+        $party = Party::create($input);
+        if($party){
+            return redirect()->route('parties.show', ['party'=> $party->id])
+            ->with('success' , 'Party registration successfully');
+        }
+        return back()->withInput()->with('errors', 'Error registration new party!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function show(Party $party)
     {
-        //
+        $party = Party::find($party->id);
+        return view('parties.show', 
+                    ['party'=> $party]
+                );
     }
 
     /**

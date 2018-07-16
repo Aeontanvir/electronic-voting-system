@@ -2,29 +2,25 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            Parties
-            <a class="btn btn-outline-primary btn-sm float-right" href="/parties/create">Create new</a>
+            Areas
+            <a class="btn btn-outline-primary btn-sm float-right" href="/areas/create">Create new</a>
         </div>
         <div class="card-body">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Thumb</th>
+                        <th scope="col">#</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Short</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($parties as $party)
+                    @foreach($areas as $area)
                     <tr>
-                        <th scope="row">
-                            <img src="/images/{{$party->image}}" alt="" class="thumb">
-                        </th>
-                        <td>{{$party->title}}</td>
-                        <td>{{$party->short}}</td>
+                        <th>{{$loop->index+1}}</th>
+                        <td>{{$area->district}}</td>
                         <td>
-                            <a class="btn btn-primary btn-sm float-right" href="/parties/{{$party->id}}">View Details</a>
+                            <a class="btn btn-primary btn-sm float-right" href="/areas/{{$area->id}}">View Details</a>
                         </td>
                     </tr>
                     @endforeach

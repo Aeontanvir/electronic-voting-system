@@ -14,28 +14,19 @@
 
 
                 {!! csrf_field() !!} 
-
-                @if (count($errors) > 0)
-                <div class="alert alert-danger">
-                    <strong>Whoops!</strong> There were some problems with your input.
-                    <br>
-                    <br>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-block">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>{{ $message }}</strong>
-                </div>
-                @endif
-
                 <div class="form-group">
                     <label for="title">Party Title</label>
                     <input type="text" name="title" class="form-control" id="title" placeholder="Party Title">
+                </div>
+
+                <div class="form-group">
+                    <label for="short">Short Title</label>
+                    <input type="text" name="short" class="form-control" id="short" placeholder="Short Title">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Short Description</label>
+                    <textarea type="text" name="description" class="form-control" id="short"></textarea>
                 </div>
 
                 <div class="form-group">

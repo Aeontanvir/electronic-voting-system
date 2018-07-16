@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePartiesTable extends Migration
+class CreateZonesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreatePartiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('parties', function (Blueprint $table) {
+        Schema::create('zones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('short');
-            $table->longText('description');
-            $table->string('image');
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ class CreatePartiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parties');
+        Schema::dropIfExists('zones');
     }
 }
