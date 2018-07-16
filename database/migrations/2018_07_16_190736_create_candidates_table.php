@@ -15,6 +15,22 @@ class CreateCandidatesTable extends Migration
     {
         Schema::create('candidates', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nid');
+            $table->string('name');
+            $table->string('father_name');
+            $table->string('mother_name');
+            $table->string('occupation');
+            $table->date('birth_date');
+
+            $table->integer('area_id')->unsigned();
+            $table->foreign('area_id')->references('id')->on('areas');
+
+            $table->integer('zone_id')->unsigned();
+            $table->foreign('zone_id')->references('id')->on('zones');
+
+            $table->integer('party_id')->unsigned();
+            $table->foreign('party_id')->references('id')->on('parties');
+
             $table->timestamps();
         });
     }
