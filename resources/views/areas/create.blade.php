@@ -2,7 +2,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h2 class="card-title">Add District</h2>
+            <h2 class="card-title float-left">Add District</h2>
         </div>
         <div class="card-body">
 

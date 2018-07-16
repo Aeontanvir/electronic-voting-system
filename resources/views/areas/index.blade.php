@@ -2,7 +2,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h2 class="card-title">Areas</h2>
+            <h2 class="card-title float-left">Areas</h2>
             <a class="btn btn-outline-primary btn-sm float-right" href="/areas/create">Create new</a>
         </div>
         <div class="card-body">
