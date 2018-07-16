@@ -2,7 +2,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            {{ $party->title }}
+        <h2 class="card-title">{{ $party->title }}</h2>
         </div>
         <div class="card-body">
             <div class="row">

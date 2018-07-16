@@ -2,7 +2,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            Party Registration
+            <h2 class="card-title float-left">Party Registration</h2>
         </div>
         <div class="card-body">
 

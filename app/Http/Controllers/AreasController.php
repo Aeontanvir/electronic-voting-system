@@ -38,9 +38,9 @@ class AreasController extends Controller
             'district' => $request->input('district')
         ]);
         if($area){
-            return redirect('areas');
+            return redirect()->route('areas.index')
+            ->with('success' , 'Area created successfully');
         }
-        
         return back()->withInput()->with('errors', 'Error creating new area');
     }
 

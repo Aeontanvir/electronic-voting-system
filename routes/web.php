@@ -18,5 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 Route::resource('parties', 'PartiesController');
 Route::resource('areas', 'AreasController');
+Route::resource('zones', 'ZonesController');
 
 Route::get('/home', 'HomeController@index')->name('home');
