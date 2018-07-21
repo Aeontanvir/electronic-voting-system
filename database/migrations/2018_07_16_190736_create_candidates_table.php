@@ -20,7 +20,8 @@ class CreateCandidatesTable extends Migration
             $table->string('father_name');
             $table->string('mother_name');
             $table->string('occupation');
-            $table->date('birth_date');
+            $table->date('date_of_birth');
+            $table->string('profile_photo');
 
             $table->integer('area_id')->unsigned();
             $table->foreign('area_id')->references('id')->on('areas');
