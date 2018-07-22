@@ -22,6 +22,7 @@ class CreateCandidatesTable extends Migration
             $table->string('occupation');
             $table->date('date_of_birth');
             $table->string('profile_photo');
+            $table->string('finger_print');
 
             $table->integer('area_id')->unsigned();
             $table->foreign('area_id')->references('id')->on('areas');

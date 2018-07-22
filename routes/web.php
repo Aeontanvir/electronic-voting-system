@@ -19,5 +19,6 @@ Auth::routes();
 Route::resource('parties', 'PartiesController');
 Route::resource('areas', 'AreasController');
 Route::resource('zones', 'ZonesController');
+Route::resource('candidates', 'CandidatesController');
 
 Route::get('/home', 'HomeController@index')->name('home');
