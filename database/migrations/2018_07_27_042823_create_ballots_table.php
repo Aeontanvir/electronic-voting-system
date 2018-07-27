@@ -22,6 +22,9 @@ class CreateBallotsTable extends Migration
             $table->integer('candidate_id')->unsigned();
             $table->foreign('candidate_id')->references('id')->on('candidates');
 
+            $table->integer('zone_id')->unsigned();
+            $table->foreign('zone_id')->references('id')->on('zones');
+
             $table->timestamps();
         });
     }

@@ -6,14 +6,22 @@
             <h2 class="card-title float-left">Election Voting: Voter Identify</h2>
         </div>
         <div class="card-body">
-            <div class="row">
-                <div class="col-md">
-                    <div class="form-group">
-                        <label for="nid">National ID</label>
-                        <input type="text" name="nid" class="form-control" id="nid" placeholder="NID" autocomplete="off">
-                    </div>
+            <form
+                method="POST"
+                action="/ballots/voter">
+
+
+                {!! csrf_field() !!} 
+                
+                <div class="form-group">
+                    <label for="nid">National ID</label>
+                    <input type="number" name="nid" class="form-control" id="nid" placeholder="NID" autocomplete="off" value="{{ old('nid') }}" required>
                 </div>
-            </div>
+
+
+                <button type="submit" class="btn btn-primary float-right">Find</button>
+
+            </form>
         </div>
     </div>
 </div>

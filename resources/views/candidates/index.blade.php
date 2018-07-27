@@ -12,7 +12,7 @@
                     <tr>
                         <th scope="col">Profile</th>
                         <th scope="col">Thumb</th>
-                        <th scope="col">NID</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Father</th>
                         <th scope="col">Mother</th>
                         <th scope="col">NID</th>
