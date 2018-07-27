@@ -20,5 +20,6 @@ Route::resource('parties', 'PartiesController');
 Route::resource('areas', 'AreasController');
 Route::resource('zones', 'ZonesController');
 Route::resource('candidates', 'CandidatesController');
+Route::resource('voters', 'VotersController');
 
 Route::get('/home', 'HomeController@index')->name('home');

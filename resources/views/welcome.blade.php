@@ -19,6 +19,11 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                background: url(assets/welcome_bg.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover; /* For WebKit*/
+                -moz-background-size: cover;    /* Mozilla*/
+                -o-background-size: cover;      /* Opera*/
+                background-size: cover;         /* Generic*/
             }
 
             .full-height {
@@ -47,6 +52,8 @@
 
             .title {
                 font-size: 84px;
+                font-weight: bold;
+                color: #fff;
             }
 
             .links > a {
@@ -57,6 +64,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                color: #fff;
             }
 
             .m-b-md {
@@ -81,7 +89,6 @@
                 <div class="title m-b-md">
                     Electronic Voting System
                 </div>
-
             </div>
         </div>
     </body>

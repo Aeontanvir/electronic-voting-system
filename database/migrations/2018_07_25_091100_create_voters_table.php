@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCandidatesTable extends Migration
+class CreateVotersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,19 @@ class CreateCandidatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('candidates', function (Blueprint $table) {
+        Schema::create('voters', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nid')->unique();
             $table->string('name');
             $table->string('father_name');
             $table->string('mother_name');
             $table->string('occupation');
+            $table->string('gender');
+            $table->string('blood');
+            $table->string('religion');
             $table->date('date_of_birth');
+            $table->string('birth_place');
+            $table->longText('address');
             $table->string('profile_photo');
             $table->string('finger_print');
 
@@ -29,9 +34,6 @@ class CreateCandidatesTable extends Migration
 
             $table->integer('zone_id')->unsigned();
             $table->foreign('zone_id')->references('id')->on('zones');
-
-            $table->integer('party_id')->unsigned();
-            $table->foreign('party_id')->references('id')->on('parties');
 
             $table->timestamps();
         });
@@ -44,6 +46,6 @@ class CreateCandidatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('candidates');
+        Schema::dropIfExists('voters');
     }
 }

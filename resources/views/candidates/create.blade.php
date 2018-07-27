@@ -26,6 +26,7 @@
                         <div class="form-group">
                             <label for="party_id">Party</label>
                             <select class="form-control" name="party_id" id="party_id">
+                                <option value="">--Select--</option>
                                 @foreach($parties as $party)
                                     <option value="{{$party->id}}">{{$party->title}}</option>
                                 @endforeach
@@ -63,6 +64,7 @@
                         <div class="form-group">
                             <label for="area_id">Area</label>
                             <select class="form-control" name="area_id" id="area_id">
+                                <option value="">--Select--</option>
                                 @foreach($areas as $area)
                                     <option value="{{$area->id}}">{{$area->district}}</option>
                                 @endforeach
@@ -71,8 +73,9 @@
                     </div>
                     <div class="col-md">
                         <div class="form-group">
-                            <label for="zone_id">Area</label>
+                            <label for="zone_id">Zone</label>
                             <select class="form-control" name="zone_id" id="zone_id">
+                                <option value="">--Select--</option>
                                 @foreach($zones as $zone)
                                     <option value="{{$zone->id}}">{{$zone->name}}</option>
                                 @endforeach
