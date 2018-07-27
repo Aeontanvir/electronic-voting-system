@@ -7,6 +7,7 @@ use App\Area;
 use App\Zone;
 use App\Party;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class CandidatesController extends Controller
 {
@@ -57,6 +58,10 @@ class CandidatesController extends Controller
             'party_id' => 'required'
         ]);
 
+        $check = Candidate::where('nid', '=', $request->nid)->get();
+        if(!$check->isEmpty()){
+            return Redirect::back()->withErrors(["NID not unique!"])->withInput($request->input());
+        }
 
         $input['nid'] = $request->nid;
         $input['name'] = $request->name;

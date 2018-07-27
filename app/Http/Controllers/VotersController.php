@@ -6,6 +6,7 @@ use App\Voter;
 use App\Area;
 use App\Zone;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class VotersController extends Controller
 {
@@ -54,6 +55,11 @@ class VotersController extends Controller
             'area_id' => 'required',
             'zone_id' => 'required'
         ]);
+
+        $check = Voter::where('nid', '=', $request->nid)->get();
+        if(!$check->isEmpty()){
+            return Redirect::back()->withErrors(["NID not unique!"])->withInput($request->input());
+        }
 
 
         $input['nid'] = $request->nid;
