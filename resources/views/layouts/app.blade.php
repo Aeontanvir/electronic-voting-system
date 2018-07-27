@@ -51,6 +51,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/ballots">Vote</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ballots/area">Result</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     Candidates <span class="caret"></span>
