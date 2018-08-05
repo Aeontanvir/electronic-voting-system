@@ -51,19 +51,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/ballots">Vote</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/ballots/area">Result</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Candidates <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="nav-link" href="/candidates">List</a>
-                                    <a class="nav-link" href="/candidates/create">Registration</a>
-                                </div>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     Voters <span class="caret"></span>
@@ -76,17 +63,23 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Details <span class="caret"></span>
+                                    Candidates <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/parties">
-                                        Parties
-                                    </a>
-                                    <a class="dropdown-item" href="/areas">
-                                        Areas
-                                    </a>
+                                    <a class="nav-link" href="/candidates">List</a>
+                                    <a class="nav-link" href="/candidates/create">Registration</a>
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/parties">Party List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/areas">Areas</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ballots/area">Result</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

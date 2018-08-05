@@ -3,7 +3,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h2 class="card-title float-left">Election Voting: Voter Identify</h2>
+            <h2 class="card-title float-left">Voter Varification</h2>
         </div>
         <div class="card-body">
             <form
