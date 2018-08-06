@@ -36,8 +36,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="name">Candidate Fullname</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" autocomplete="off">
+                    <label for="name">Candidate's Full Name</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Candidate's Full Name" autocomplete="off">
                 </div>
 
                 <div class="form-group">

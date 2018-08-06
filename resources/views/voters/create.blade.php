@@ -35,8 +35,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="name">Candidate Fullname</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" autocomplete="off" value="{{ old('name') }}" required>
+                    <label for="name">Voter's Full Name</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Voter's Full Name" autocomplete="off" value="{{ old('name') }}" required>
                 </div>
 
                 <div class="form-group">

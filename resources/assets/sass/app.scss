@@ -8,6 +8,28 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+body{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.card{
+  border: 2px solid #0044ff;
+}
+
+
+input,
+select,
+textarea, {
+  font-weight: bold;
+  color: #090175;
+  border: 1px solid #000000;
+}
+
+.form-control{
+  border: 1px solid #000000;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -18,3 +40,5 @@
   width: 100px;
   height: 100px;
 }
+
+
